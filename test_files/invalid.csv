@@ -1,0 +1,5 @@
+Name,Age,Email
+John Doe,invalid_age,john@example.com
+Jane Smith,25,not_an_email
+"Smith, Robert",45,robert@example.com,extra_field
+"O'Connor, Mary"28,mary@example.com 

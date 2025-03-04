@@ -1,8 +1,8 @@
-# Enterprise File Validation Service
+# File Validation Service
 
 ## Overview
 
-The Enterprise File Validation Service provides robust validation capabilities for structured data files commonly used in enterprise environments. The service supports XML-based formats (including KML and GML) and delimited text files (CSV/TSV), offering schema-based validation for XML formats and pattern-based validation for delimited files.
+The File Validation Service provides robust validation capabilities for structured data files commonly used in enterprise environments. The service supports XML-based formats (including KML and GML) and delimited text files (CSV/TSV), offering schema-based validation for XML formats and pattern-based validation for delimited files.
 
 ## Supported File Types
 
@@ -45,7 +45,6 @@ The Enterprise File Validation Service provides robust validation capabilities f
 ## Technical Specifications
 
 ### XML Validation
-- **Schema Resolution**: Local file system or HTTP(S) URLs
 - **DTD Support**: DTD processing disabled for security
 - **XML Features**:
   - Namespace validation
@@ -119,10 +118,6 @@ The Enterprise File Validation Service provides robust validation capabilities f
 ### Schema Management
 - Customers must maintain their own schemas
 - Schema versioning handled by customer
-- Schema storage options:
-  - Local file system
-  - HTTP(S) endpoints
-  - Customer-provided schema registry
 
 ### Performance Guidelines
 1. **XML Documents**:
@@ -165,12 +160,3 @@ The Enterprise File Validation Service provides robust validation capabilities f
    - Batch similar file types
    - Monitor memory usage
    - Implement file size checks
-
-## Support and Resources
-
-- Technical documentation
-- Schema validation tools
-- Pattern testing utilities
-- Performance monitoring tools
-- Integration examples
-- API documentation 

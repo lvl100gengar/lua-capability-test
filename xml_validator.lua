@@ -36,19 +36,6 @@ local SCHEMA_BASE_PATH = "./schemas"
 -- get_node_namespace(node) -> namespace or nil, error_message
 -- validate_node(node, schema) -> boolean, error_message
 
--- Helper function to detect file type from extension
-local function get_file_type(filepath)
-    local ext = filepath:match("%.([^%.]+)$")
-    if ext then
-        ext = ext:lower()
-        if ext == "kml" then
-            return "kml"
-        elseif ext == "gml" then
-            return "gml"
-        end
-    end
-    return "xml"
-end
 
 -- Helper function to resolve schema path
 local function resolve_schema_path(schema_path)
@@ -171,8 +158,7 @@ local function main()
     if result_code ~= ERROR_CODES.SUCCESS then
         io.stderr:write(error_msg .. "\n")
     else
-        local file_type = get_file_type(xml_path)
-        io.stdout:write(string.format("Successfully validated %s file\n", file_type:upper()))
+        io.stdout:write(string.format("Successfully validated file\n"))
     end
     
     return result_code
